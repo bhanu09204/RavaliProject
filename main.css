@@ -1,0 +1,38 @@
+#roulette {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+#arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 30px 0 30px 50px;
+    border-color: transparent transparent transparent black;
+    z-index: 10;
+}
+.number {
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    transform-origin: 50% 120%;
+    cursor: pointer;
+}
+.number:nth-child(odd) {
+    background-color: #c0392b;
+}
+.number:nth-child(even) {
+    background-color: #2980b9;
+}
+.number:hover {
+    background-color: #f1c40f;
+}
